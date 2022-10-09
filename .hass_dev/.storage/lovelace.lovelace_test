@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace_test",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "cards": [
+            {
+              "type": "custom:mushroom-room-card",
+              "entity": "light.bed_light",
+              "area": "wohnzimmer",
+              "icon": "mdi:account-plus",
+              "button_icon": "mdi:air-humidifier-off",
+              "button_icon_color": "cyan",
+              "icon_color": "purple"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

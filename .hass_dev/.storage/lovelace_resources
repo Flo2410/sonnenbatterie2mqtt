@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "url": "http://localhost:5000/mushroom.js",
+        "type": "module",
+        "id": "67f52f1886304ab4bad414bc3565ff06"
+      }
+    ]
+  }
+}

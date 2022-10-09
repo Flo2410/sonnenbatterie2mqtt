@@ -1,0 +1,452 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {
+        "entity_id": "person.anne_therese",
+        "state": "not_home",
+        "attributes": {
+          "editable": false,
+          "id": "anne_therese",
+          "latitude": 48.07500654918235,
+          "longitude": 16.290217112146358,
+          "gps_accuracy": 65,
+          "source": "device_tracker.demo_anne_therese",
+          "friendly_name": "Anne Therese",
+          "entity_picture": "/local/mushrooms.jpeg"
+        },
+        "last_changed": "2022-10-09T19:57:52.619720+00:00",
+        "last_updated": "2022-10-09T19:57:54.671945+00:00",
+        "context": {
+          "id": "01GEZ56M3FS9V6NV5VJXAT99NE",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "person.florian",
+        "state": "unknown",
+        "attributes": {
+          "editable": true,
+          "id": "florian",
+          "user_id": "1473bd23c162406ca2c7924d9e45a5a3",
+          "friendly_name": "Florian"
+        },
+        "last_changed": "2022-10-09T19:57:52.634890+00:00",
+        "last_updated": "2022-10-09T19:57:54.672001+00:00",
+        "context": {
+          "id": "01GEZ56M3GKEX4R11E3JNVQXWM",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "input_boolean.home_thermostat_heater",
+        "state": "off",
+        "attributes": {
+          "editable": false,
+          "icon": "mdi:car",
+          "friendly_name": "Home Heater"
+        },
+        "last_changed": "2022-10-09T19:57:54.192303+00:00",
+        "last_updated": "2022-10-09T19:57:54.192303+00:00",
+        "context": {
+          "id": "01GEZ56KMGYK0KSM401DK2NY47",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "input_number.home_thermostat_temperature",
+        "state": "20.0",
+        "attributes": {
+          "initial": 20.0,
+          "editable": false,
+          "min": 0.0,
+          "max": 35.0,
+          "step": 0.5,
+          "mode": "slider",
+          "friendly_name": "Home Temperature"
+        },
+        "last_changed": "2022-10-09T19:57:54.192659+00:00",
+        "last_updated": "2022-10-09T19:57:54.192659+00:00",
+        "context": {
+          "id": "01GEZ56KMGMKH99KH517S1VQZP",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "alarm_control_panel.alarm_panel_1",
+        "state": "disarmed",
+        "attributes": {
+          "code_format": null,
+          "changed_by": null,
+          "code_arm_required": true,
+          "friendly_name": "Alarm panel 1",
+          "supported_features": 63
+        },
+        "last_changed": "2022-10-09T19:57:54.223240+00:00",
+        "last_updated": "2022-10-09T19:57:54.223240+00:00",
+        "context": {
+          "id": "01GEZ56KNFSXQS1Q5BNKV6R8RP",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "alarm_control_panel.alarm_panel_2",
+        "state": "disarmed",
+        "attributes": {
+          "code_format": null,
+          "changed_by": null,
+          "code_arm_required": true,
+          "friendly_name": "Alarm panel 2",
+          "supported_features": 63
+        },
+        "last_changed": "2022-10-09T19:57:54.229596+00:00",
+        "last_updated": "2022-10-09T19:57:54.229596+00:00",
+        "context": {
+          "id": "01GEZ56KNN644KAZ0E5K7R9XDJ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "alarm_control_panel.alarm_panel_code",
+        "state": "disarmed",
+        "attributes": {
+          "code_format": "number",
+          "changed_by": null,
+          "code_arm_required": true,
+          "friendly_name": "Alarm panel code",
+          "supported_features": 63
+        },
+        "last_changed": "2022-10-09T19:57:54.229748+00:00",
+        "last_updated": "2022-10-09T19:57:54.229748+00:00",
+        "context": {
+          "id": "01GEZ56KNNTSEE4WN6614ZFVTK",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "alarm_control_panel.alarm_panel_text_code",
+        "state": "disarmed",
+        "attributes": {
+          "code_format": "text",
+          "changed_by": null,
+          "code_arm_required": true,
+          "friendly_name": "Alarm panel text code",
+          "supported_features": 63
+        },
+        "last_changed": "2022-10-09T19:57:54.229871+00:00",
+        "last_updated": "2022-10-09T19:57:54.229871+00:00",
+        "context": {
+          "id": "01GEZ56KNNF253SSCK3Q7Q08GC",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "climate.home_thermostat",
+        "state": "off",
+        "attributes": {
+          "hvac_modes": [
+            "heat",
+            "off"
+          ],
+          "min_temp": 7.0,
+          "max_temp": 35.0,
+          "target_temp_step": 0.5,
+          "current_temperature": 20.0,
+          "temperature": 7.0,
+          "hvac_action": "off",
+          "friendly_name": "Home Thermostat",
+          "supported_features": 1
+        },
+        "last_changed": "2022-10-09T19:57:54.267693+00:00",
+        "last_updated": "2022-10-09T19:57:54.671747+00:00",
+        "context": {
+          "id": "01GEZ56M3FM1CCFPJ4AGHS6HN3",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.today_energy",
+        "state": "0",
+        "attributes": {
+          "state_class": "total",
+          "unit_of_measurement": "kWh",
+          "device_class": "energy",
+          "friendly_name": "Total energy 1"
+        },
+        "last_changed": "2022-10-09T19:57:54.569997+00:00",
+        "last_updated": "2022-10-09T19:57:54.569997+00:00",
+        "context": {
+          "id": "01GEZ56M09V2HJK5QANP7GFQMD",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "kWh"
+      },
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.total_energy_mwh",
+        "state": "0",
+        "attributes": {
+          "state_class": "total",
+          "unit_of_measurement": "MWh",
+          "device_class": "energy",
+          "friendly_name": "Total energy 2"
+        },
+        "last_changed": "2022-10-09T19:57:54.570112+00:00",
+        "last_updated": "2022-10-09T19:57:54.570112+00:00",
+        "context": {
+          "id": "01GEZ56M0AC3ENC0QEVKTREGQS",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "MWh"
+      },
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.total_gas_m3",
+        "state": "0",
+        "attributes": {
+          "state_class": "total",
+          "unit_of_measurement": "m³",
+          "device_class": "gas",
+          "friendly_name": "Total gas 1"
+        },
+        "last_changed": "2022-10-09T19:57:54.570200+00:00",
+        "last_updated": "2022-10-09T19:57:54.570200+00:00",
+        "context": {
+          "id": "01GEZ56M0A0X76Y7TCQ2884D1H",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "m³"
+      },
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "sensor.total_gas_ft3",
+        "state": "0",
+        "attributes": {
+          "state_class": "total",
+          "unit_of_measurement": "ft³",
+          "device_class": "gas",
+          "friendly_name": "Total gas 2"
+        },
+        "last_changed": "2022-10-09T19:57:54.570282+00:00",
+        "last_updated": "2022-10-09T19:57:54.570282+00:00",
+        "context": {
+          "id": "01GEZ56M0A7TB6VVR8RRZZ6KZM",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": {
+        "native_value": 0,
+        "native_unit_of_measurement": "ft³"
+      },
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.demo_update_no_install",
+        "state": "on",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "1.0.0",
+          "in_progress": false,
+          "latest_version": "1.0.1",
+          "release_summary": "Awesome update, fixing everything!",
+          "release_url": "https://www.example.com/release/1.0.1",
+          "skipped_version": null,
+          "title": "Awesomesoft Inc.",
+          "entity_picture": "https://brands.home-assistant.io/_/demo/icon.png",
+          "friendly_name": "Demo Update No Install",
+          "supported_features": 0
+        },
+        "last_changed": "2022-10-09T19:57:54.570523+00:00",
+        "last_updated": "2022-10-09T19:57:54.570523+00:00",
+        "context": {
+          "id": "01GEZ56M0A7QYS3M7GA5TCW63S",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.demo_no_update",
+        "state": "off",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "1.0.0",
+          "in_progress": false,
+          "latest_version": "1.0.0",
+          "release_summary": null,
+          "release_url": null,
+          "skipped_version": null,
+          "title": "AdGuard Home",
+          "entity_picture": "https://brands.home-assistant.io/_/demo/icon.png",
+          "friendly_name": "Demo No Update",
+          "supported_features": 11
+        },
+        "last_changed": "2022-10-09T19:57:54.570587+00:00",
+        "last_updated": "2022-10-09T19:57:54.570587+00:00",
+        "context": {
+          "id": "01GEZ56M0A8F9V7K27RX8GGKXB",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.demo_add_on",
+        "state": "on",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "1.0.0",
+          "in_progress": false,
+          "latest_version": "1.0.1",
+          "release_summary": "Awesome update, fixing everything!",
+          "release_url": "https://www.example.com/release/1.0.1",
+          "skipped_version": null,
+          "title": "AdGuard Home",
+          "entity_picture": "https://brands.home-assistant.io/_/demo/icon.png",
+          "friendly_name": "Demo add-on",
+          "supported_features": 11
+        },
+        "last_changed": "2022-10-09T19:57:54.570719+00:00",
+        "last_updated": "2022-10-09T19:57:54.570719+00:00",
+        "context": {
+          "id": "01GEZ56M0ABQ7ERDY3PSYMYXTD",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.demo_living_room_bulb_update",
+        "state": "on",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "1.93.3",
+          "in_progress": false,
+          "latest_version": "1.94.2",
+          "release_summary": "Added support for effects",
+          "release_url": "https://www.example.com/release/1.93.3",
+          "skipped_version": null,
+          "title": "Philips Lamps Firmware",
+          "device_class": "firmware",
+          "entity_picture": "https://brands.home-assistant.io/_/demo/icon.png",
+          "friendly_name": "Demo Living Room Bulb Update",
+          "supported_features": 11
+        },
+        "last_changed": "2022-10-09T19:57:54.570848+00:00",
+        "last_updated": "2022-10-09T19:57:54.570848+00:00",
+        "context": {
+          "id": "01GEZ56M0A47P91B5KXRD7ER2G",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "update.demo_update_with_progress",
+        "state": "on",
+        "attributes": {
+          "auto_update": false,
+          "installed_version": "1.93.3",
+          "in_progress": false,
+          "latest_version": "1.94.2",
+          "release_summary": "Added support for effects",
+          "release_url": "https://www.example.com/release/1.93.3",
+          "skipped_version": null,
+          "title": "Philips Lamps Firmware",
+          "device_class": "firmware",
+          "entity_picture": "https://brands.home-assistant.io/_/demo/icon.png",
+          "friendly_name": "Demo Update with Progress",
+          "supported_features": 31
+        },
+        "last_changed": "2022-10-09T19:57:54.571019+00:00",
+        "last_updated": "2022-10-09T19:57:54.571019+00:00",
+        "context": {
+          "id": "01GEZ56M0BAK5E4SP1M4HBBXZ5",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2022-10-09T20:01:42.531963+00:00"
+    }
+  ]
+}
