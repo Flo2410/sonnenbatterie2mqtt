@@ -11,7 +11,8 @@
     "start": "node .",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts --exec npm run dev:start",
-    "start:hass": "docker run --rm -p8123:8123 -v ${PWD}/.hass_dev:/config homeassistant/home-assistant:beta"
+    "start:hass": "docker run --rm -p8123:8123 -v ${PWD}/.hass_dev:/config homeassistant/home-assistant:beta",
+    "start:mqtt": "docker run --rm -it -p 1883:1883 -p 9001:9001 -v ${PWD}/.mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf -v ${PWD}/.mosquitto/data:/mosquitto/data -v ${PWD}/.mosquitto/log:/mosquitto/log eclipse-mosquitto"
   },
   "devDependencies": {
     "@types/node": "^18.7.18",

@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  hass:
+    image: homeassistant/home-assistant:beta
+    restart: unless-stopped
+    ports:
+      - 8123:8123
+    volumes:
+      - ${PWD}/.hass_dev:/config
+    networks:
+      - test_net
+
+  mosquitto:
+    image: eclipse-mosquitto
+    restart: unless-stopped
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ${PWD}/.mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ${PWD}/.mosquitto/data:/mosquitto/data
+      - ${PWD}/.mosquitto/log:/mosquitto/log
+    networks:
+      - test_net
+
+networks:
+  test_net:
