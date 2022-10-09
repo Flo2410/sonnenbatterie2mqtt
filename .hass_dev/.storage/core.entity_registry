@@ -1168,6 +1168,57 @@
         "supported_features": 0,
         "unique_id": "sensor_9",
         "unit_of_measurement": "ft³"
+      },
+      {
+        "area_id": null,
+        "capabilities": {
+          "min": 0.0,
+          "max": 100.0,
+          "step": 1.0,
+          "mode": "auto"
+        },
+        "config_entry_id": "1e6679715e2f78b46813f8e608247cdd",
+        "device_class": null,
+        "device_id": "364d46ec2b9af7e98033e7f0067bb153",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "number.ip_address",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8d103e6a140fae86aeaf8f57d343cd0c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {},
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "IP Address",
+        "platform": "mqtt",
+        "supported_features": 0,
+        "unique_id": "ip_address",
+        "unit_of_measurement": null
+      },
+      {
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "1e6679715e2f78b46813f8e608247cdd",
+        "device_class": null,
+        "device_id": "364d46ec2b9af7e98033e7f0067bb153",
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "sensor.test_sensor",
+        "hidden_by": null,
+        "icon": null,
+        "id": "bc19fcf80a13fded4e16ed7b2fd0b21d",
+        "has_entity_name": false,
+        "name": null,
+        "options": {},
+        "original_device_class": "power",
+        "original_icon": null,
+        "original_name": "Test Sensor",
+        "platform": "mqtt",
+        "supported_features": 0,
+        "unique_id": "test_sensor",
+        "unit_of_measurement": null
       }
     ]
   }
