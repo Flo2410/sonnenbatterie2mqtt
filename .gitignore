@@ -116,3 +116,18 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# hass
+.hass_dev/*
+!.hass_dev/configuration.yaml
+!.hass_dev/ui-lovelace.yaml
+!.hass_dev/lovelace-mushroom-showcase.yaml
+!.hass_dev/views
+!.hass_dev/www
+!.hass_dev/packages
+.hass_dev/www/community/*
+
+# mosquito
+.mosquitto/data
+.mosquitto/log
