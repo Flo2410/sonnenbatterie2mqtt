@@ -24,5 +24,14 @@ services:
     networks:
       - test_net
 
+  sonnenbatterie2mqtt:
+    image: ghcr.io/flo2410/sonnenbatterie2mqtt:latest
+    restart: unless-stopped
+    environment:
+      - MQTT_BROKER_URL=mqtt://mosquitto:1883
+      - SONNENBATTERIE_IP=10.0.0.177
+    networks:
+      - test_net
+
 networks:
   test_net:

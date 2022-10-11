@@ -1,0 +1,4 @@
+.hass_dev/
+.mosquitto/
+dist/
+.env
