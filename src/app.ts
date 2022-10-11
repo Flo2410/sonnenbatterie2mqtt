@@ -1,10 +1,10 @@
-import { anounce_all_entities } from "./mqtt/discovery";
+import * as dotenv from "dotenv";
+dotenv.config();
+
+import { setup } from "./setup";
 import { setup_mqtt } from "./mqtt/setup";
 
-console.log("Hello World");
+console.log(process.env.SONNENBATTERIE_IP);
 
 setup_mqtt();
-
-anounce_all_entities();
-
-console.log("bottom");
+setup();

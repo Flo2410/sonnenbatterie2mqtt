@@ -1,3 +1,5 @@
+import cron from "node-cron";
+import { Hass_Device_Class } from "types/hass.type";
 import { Mqtt_Entity_Domain, mqtt_topics_builder } from "./mqtt";
 import { mqtt_client } from "./setup";
 
@@ -19,17 +21,18 @@ export interface IMqttEntity<T> {
   state_topic: string;
   command_topic?: string;
 
-  device_class?: string;
+  device_class?: Hass_Device_Class;
   unit_of_measurement?: string;
   value_template?: string;
+  charging_template?: string;
 
   state: T;
   has_command?: boolean;
 }
 
-export type IMqttEntityProps<T> = Omit<
+export type IMqttEntityParams<T> = Omit<
   IMqttEntity<T>,
-  "device" | "config_topic" | "state_topic" | "command_topic"
+  "device" | "config_topic" | "state_topic" | "command_topic" | "state"
 >;
 
 export type IMqttEntityConfig<T> = Omit<
@@ -37,7 +40,7 @@ export type IMqttEntityConfig<T> = Omit<
   "entity_domain" | "config_topic" | "state" | "has_command"
 >;
 
-export class MqttEntity<T> implements IMqttEntity<T> {
+export class MqttEntity<T = number> implements IMqttEntity<T> {
   static readonly MQTT_DEVICE: IMqttDevice = {
     name: "Sonnenbatterie",
     model: "Sonnenbatterie2mqtt",
@@ -57,11 +60,12 @@ export class MqttEntity<T> implements IMqttEntity<T> {
   state_topic: string;
   command_topic?: string;
 
-  device_class?: string;
+  device_class?: Hass_Device_Class;
   unit_of_measurement?: string;
   value_template?: string;
+  charging_template?: string;
 
-  state: T;
+  state!: T;
   has_command?: boolean;
 
   constructor({
@@ -72,15 +76,13 @@ export class MqttEntity<T> implements IMqttEntity<T> {
     device_class,
     unit_of_measurement,
     value_template,
-    state,
-  }: IMqttEntityProps<T>) {
+  }: IMqttEntityParams<T>) {
     this.name = name;
     this.unique_id = unique_id;
     this.entity_domain = entity_domain;
     this.device_class = device_class;
     this.unit_of_measurement = unit_of_measurement;
     this.value_template = value_template;
-    this.state = state;
 
     const { config_topic, state_topic, command_topic } = mqtt_topics_builder(
       this.entity_domain,
@@ -92,16 +94,25 @@ export class MqttEntity<T> implements IMqttEntity<T> {
   }
 
   public announce() {
-    mqtt_client
-      .publish(this.config_topic, JSON.stringify(this.config), {
-        retain: true,
-      })
-      .publish(this.state_topic, JSON.stringify(this.state));
+    mqtt_client.publish(this.config_topic, JSON.stringify(this.config), {
+      retain: true,
+    });
   }
 
   public update(data: T) {
-    mqtt_client.publish(this.state_topic, JSON.stringify(data), (err) => {
+    const data_str = typeof data === "string" ? data : JSON.stringify(data);
+    console.log(`Updating state of "${this.name}" to be: ${data_str}`);
+
+    mqtt_client.publish(this.state_topic, data_str, (err) => {
       if (!err) this.state = data;
+    });
+  }
+
+  public async register_update(value: () => Promise<T>) {
+    this.update(await value());
+
+    cron.schedule("*/10 * * * * *", async () => {
+      this.update(await value());
     });
   }
 
