@@ -1,4 +1,4 @@
-import { MQTT_BROKER_URL } from "../config/mqtt";
+import { MQTT_BROKER_URL } from "./mqtt";
 import mqtt, { MqttClient } from "mqtt";
 
 export let mqtt_client: MqttClient;

@@ -1,43 +1,29 @@
-import { MqttClient } from "mqtt";
-import {
-  HassConfigBuilderReturnProp,
-  hass_config_builder,
-  Hass_Entity_Domain,
-} from "../config/hass";
-import { mqtt_client } from "./setup";
+import cron from "node-cron";
+import { Mqtt_Entity_Domain } from "../mqtt/mqtt";
+import { MqttEntity } from "./MqttEntity";
 
-export const discover_ip_setting = () => {
-  const config_and_topic = hass_config_builder({
+export const anounce_all_entities = () => {
+  const ip_address_entity = new MqttEntity<number>({
     name: "IP Address",
     unique_id: "ip_address",
-    entity_domain: Hass_Entity_Domain.NUMBER,
-    include_command_topic: true,
+    entity_domain: Mqtt_Entity_Domain.NUMBER,
+    has_command: true,
+    state: 69,
   });
 
-  discover(config_and_topic).publish(config_and_topic.config.state_topic, "69");
-};
+  ip_address_entity.announce();
 
-export const discover_test_sensor = () => {
-  const config_and_topic = hass_config_builder({
+  const test_sensor_entity = new MqttEntity<{ test: number }>({
     name: "Test Sensor",
     unique_id: "test_sensor",
-    entity_domain: Hass_Entity_Domain.SENSOR,
+    entity_domain: Mqtt_Entity_Domain.SENSOR,
     device_class: "power",
     value_template: "{{ value_json.test}}",
+    state: { test: 420 },
   });
+  test_sensor_entity.announce();
 
-  discover(config_and_topic).publish(
-    config_and_topic.config.state_topic,
-    JSON.stringify({ test: 420 })
-  );
-};
-
-export const discover = (hass_config_builder: HassConfigBuilderReturnProp): MqttClient => {
-  return mqtt_client.publish(
-    hass_config_builder.config_topic,
-    JSON.stringify(hass_config_builder.config),
-    {
-      retain: true,
-    }
-  );
+  cron.schedule("* * * * * *", () => {
+    test_sensor_entity.update({ test: test_sensor_entity.state.test + 1 });
+  });
 };
