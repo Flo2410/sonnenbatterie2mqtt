@@ -29,8 +29,6 @@ RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nodejs -u 1001
 USER nodejs
 
-EXPOSE 3000
-
 CMD ["node", "."]
 
 LABEL org.opencontainers.image.source https://github.com/Flo2410/sonnenbatterie2mqtt
