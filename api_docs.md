@@ -1,3 +1,5 @@
+https://forum.iobroker.net/topic/13866/sonnenbatterie
+
 http://[ip_adresse_der_sonnenbatterie]:7979/rest/devices/battery/[parameter]
 
 Einige Werte für [parameter] sind bekannt:
