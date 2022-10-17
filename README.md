@@ -10,7 +10,7 @@ This service is using the old API of the sonnenBatterie. If you're looking for t
 
 ## Installation
 
-This serice runs as a Docker container. You can either run it via the commandline or via docker compose
+This service runs as a Docker container. You can either run it via the commandline or via docker compose
 
 ### CLI
 
