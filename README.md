@@ -34,3 +34,7 @@ services:
       - MQTT_BROKER_URL=mqtt_connection_string
       - SONNENBATTERIE_IP=ip_of_the_battery
 ```
+
+## License
+
+GNU General Public License v3.0 (see [LICENSE.md](LICENSE.md))
