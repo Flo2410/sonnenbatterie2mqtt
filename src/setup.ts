@@ -5,7 +5,7 @@ import { MqttEntity } from "./mqtt/MqttEntity";
 import { Hass_Device_Class } from "./types/hass.type";
 
 const NAME_PREFIX = "Sonnenbatterie";
-const UNIQUE_ID_PREFIX = "sonnenbatterie_";
+const UNIQUE_ID_PREFIX = ""; // https://developers.home-assistant.io/blog/2023-057-21-change-naming-mqtt-entities/
 
 export const announce_and_register_update = (mqtt_entity: MqttEntity, http_sensor: HttpSensor) => {
   mqtt_entity.announce();
@@ -51,7 +51,7 @@ export const setup = () => {
       entity_domain: Mqtt_Entity_Domain.SENSOR,
       device_class: Hass_Device_Class.BATTERY,
       unit_of_measurement: "%",
-      charging_template: `{{ is_state("sensor.sonnenbatterie_betriebsart", "CHARGING")}}`,
+      charging_template: `{{ is_state("sensor.${UNIQUE_ID_PREFIX}betriebsart", "CHARGING")}}`,
     }),
     new HttpSensor({
       sensor_parameter: SonnenbatterieParameter.STATE_OF_CHARGE,
